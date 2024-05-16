@@ -2,24 +2,25 @@ const searchBox = document.querySelector("#search-box");
 const crossBtn = document.querySelector("#cross");
 const searchBtn = document.querySelector("#search");
 const searchResult = document.querySelector("#search-result");
-
+// for searchbutton
 searchBtn.addEventListener("click", async (event) => {
   search(event);
 });
-
+// also for search by enter button
 searchBox.addEventListener("keypress", async (event) => {
   if (event.key === "Enter") {
     search(event);
   }
 });
-
+// for cross button
 crossBtn.addEventListener("click", () => {
   searchBox.value = "";
 });
-
+// funtion for fetch api data
 async function search(event) {
   const searchQuery = searchBox.value;
-  event.preventDefault();
+  event.preventDefault(); //for auto null
+
   console.log(searchQuery);
   if (searchQuery === "") {
     alert("Please enter a search text");
@@ -31,7 +32,7 @@ async function search(event) {
     displayimage(data);
   }
 }
-
+// function for display fetch api data on webpage
 function displayimage(data) {
   searchResult.innerHTML = "";
   data.results.forEach((element) => {
