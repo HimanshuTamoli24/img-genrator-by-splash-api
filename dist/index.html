@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      img {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        flex: 0 0 calc(33.33% - 20px);
+      }
+    </style>
+  </head>
+
+  <body class="text-white bg-blue-500" id="clear">
+    <h1 class="text-center m-20 text-5xl">IMAGE SEARCH ENGINE</h1>
+    <form
+      class="w-[90%] max-w-2xl m-auto h-20 bg-blue-950 flex items-center rounded-xl"
+    >
+      <input class="max-w-[600] flex-1 h-full border-0 outline-0 bg-transparent
+      text-white text-2xl pt-0 pb-0 pl-7 pr-7 placeholder-white" text"
+      id="search-box" placeholder="search anything here" />
+      <button class="m-4 text-2xl" id="cross">
+        <i class="fas fa-times cross-icon"></i>
+      </button>
+      <button class="pr-6 m-4 text-2xl" id="search">
+        <i class="fas fa-search icon search-icon"></i>
+      </button>
+    </form>
+    <div class="flex justify-center flex-wrap gap-5" id="search-result"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
